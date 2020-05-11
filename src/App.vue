@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main class="mainContainer">
+  <Header/>
+  <Menu/>
+  <Slider/>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Slider from './components/Slider';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  components: {
+    Header,
+    Menu,
+    Slider
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+  font-family: 'Raleway', sans-serif;
+}
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 </style>
