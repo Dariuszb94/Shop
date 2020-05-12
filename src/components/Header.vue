@@ -1,11 +1,16 @@
 <template>
   <div class="headerContainer">
-    <section >
+    <section class="searchSection">
       <div class="searchBar">
-      <input  placeholder="Search" class="search"><v-icon class="icon">mdi-magnify</v-icon>
+      <input  placeholder="Search" class="search">
+      <v-icon class="icon">mdi-magnify</v-icon>
       </div>
     </section>
-    <section><a href="#"><h1>SuperShop</h1></a></section>
+    <section class="title">
+      <a href="#" v-on:click="goToMain()">
+        <h1>Fashion Shop</h1>
+      </a>
+    </section>
     <section > 
       <v-btn class="basket">
         <div class="basketSection"> 
@@ -20,6 +25,13 @@
 <script>
 export default {
   name: 'Header',
+  methods:{
+    goToMain() {
+      this.$store.commit("changeView", "home");
+    },
+  },
+    mounted(){
+    }
 }
 </script>
 
@@ -31,7 +43,7 @@ export default {
   color:white !important;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   padding: 16px;
 }
 .basket{
@@ -44,13 +56,17 @@ export default {
 }
 .search{
   outline-width: 0;
+  color:white;
 }
 h1{
-  font-family: 'Dancing Script', cursive;
+font-family: 'Playfair Display', serif;
   font-size:40px;
+  position: relative;
+  left:-40px;
 }
 .searchBar{
   border-bottom:1px solid white;
+  width:100%;
 }
 .icon{
    color:white !important;
@@ -58,5 +74,9 @@ h1{
 a{
   text-decoration: none;
   color:white;
+}
+.title{
+  padding-right:20%;
+  padding-left:20%;
 }
 </style>

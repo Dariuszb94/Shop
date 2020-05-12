@@ -1,10 +1,10 @@
 <template>
   <div>
     <ul class="menuContainer">
-      <li class="list-element"><v-btn outlined class="menuButton">ODZIEŻ DAMSKA</v-btn></li>
-      <li class="list-element"><v-btn outlined class="menuButton">ODZIEŻ MĘSKA</v-btn></li>
-      <li class="list-element"><v-btn outlined class="menuButton">DODATKI</v-btn></li>
-      <li class="list-element"><v-btn outlined class="menuButton">NOWOŚCI</v-btn></li>
+      <li class="list-element"><v-btn class="menuButton" v-on:click="goToWomen()">WOMEN</v-btn></li>
+      <li class="list-element"><v-btn class="menuButton" v-on:click="goToMen()">MEN</v-btn></li>
+      <li class="list-element"><v-btn class="menuButton" v-on:click="goToExtras()">EXTRAS</v-btn></li>
+      <li class="list-element"><v-btn class="menuButton" v-on:click="goToNew()">NEW</v-btn></li>
     </ul>
   </div>
 </template>
@@ -12,6 +12,31 @@
 <script>
 export default {
   name: 'Menu',
+    data() {
+    return {
+       currentView: this.$store.getters.getView,
+    }
+  },
+    methods:{
+goToWomen() {
+this.$store.commit("changeView", "product");
+this.$store.commit("changeSubView", "women");
+},
+goToMen() {
+this.$store.commit("changeView", "product");
+this.$store.commit("changeSubView", "men");
+},
+goToExtras() {
+this.$store.commit("changeView", "product");
+this.$store.commit("changeSubView", "extras");
+},
+goToNew() {
+this.$store.commit("changeView", "product");
+this.$store.commit("changeSubView", "new");
+},
+  },
+  mounted(){
+  }
 }
 </script>
 
@@ -29,12 +54,14 @@ export default {
   padding-top:16px;
 }
 .list-element{
-  padding-right:8px;
-  padding-left:8px;
+  padding:8px;
   font-size: 16px;
+
 }
 .menuButton{
   background-color:#373a3e !important;
-  color:white !important
+  color:white !important;
+  font-size:20px;
 }
+
 </style>
