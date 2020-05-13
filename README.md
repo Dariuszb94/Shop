@@ -1,24 +1,19 @@
-# sho
+# Cloth Shop
+App lets you add items to cart
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-## Project setup
-```
-npm install
-```
+## General info
+You can navigate between sections (women, men, extras, news). Clicking "BUY" adds item to your cart. You can check value of your cart at any moment by clicking on cart icon.
+Project is created with:
+* Vue version: 2.6.11
+* Vuex version: 3.4.0
+## Setup
+To run this project, download a repo, then go to repo folder, open terminal:
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+$ npm install
+$ npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
