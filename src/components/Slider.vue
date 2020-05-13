@@ -7,7 +7,7 @@
           <header>-20%</header>
           <main>
             <span>Special Offers</span>
-            <v-btn outlined v-on:click="changeBackground()" class="moreButton">See more</v-btn>
+            <v-btn outlined v-on:click="goToWomen()" class="moreButton">See more</v-btn>
           </main>
           <footer>New Designs</footer>
         </div>
@@ -39,6 +39,10 @@ else{
 }
    this.backgroundMain=!this.backgroundMain;
 },
+goToWomen() {
+this.$store.commit("changeView", "product");
+this.$store.commit("changeSubView", "women");
+},
 changeBackground2() {
 
     //this.image.backgroundImage="url(https://i.ibb.co/tDVJt5t/main-bg1.jpg)";
@@ -69,7 +73,7 @@ else{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:white;
+  background-color:#222222;
   background-image:url(https://i.ibb.co/BKNFPSJ/group-of-photographers-inside-the-building-3777916.jpg);
   padding-top:5%;
   padding-bottom:5%;
@@ -84,65 +88,111 @@ else{
   transition: background-image 1s ease-in-out;
 }
 .sliderMain:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.7);
-}
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  }
 .sliderContainer{
-    background-color: #222222;
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
+  background-color: #222222;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
 }
-
 header{
-    font-size:112px;
-    font-weight: 900;
-     color: #FFF;
-    position: relative;
+  font-size:152px;
+  font-weight: 900;
+  color: #FFF;
+  position: relative;
+  margin-top:4%;
 }
 main{
-    font-size:40px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom:8%;
-    padding-top:8%;
-    font-weight: 900;
-         color: #FFF;
-    position: relative;
+  font-size:40px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom:8%;
+  padding-top:8%;
+  font-weight: 900;
+  color: #FFF;
+  position: relative;
 }
 .moreButton{
-       color: #FFF;
-    position: relative;
-    margin-top: 8% ;
+  color: #FFF;
+  position: relative;
+  margin-top: 16%;
+  margin-bottom: 10%;
 }
 footer{
-    font-size:24px;
-    font-weight: 900;
-           color: #FFF;
-    position: relative;
+  font-size:24px;
+  font-weight: 900;
+  color: #FFF;
+  position: relative;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 .change{
-    width:50px;
-    font-size: 80px;
-    color:#77212e;
+  width:50px;
+  font-size: 80px;
+  color:#77212e;
 }
 .arrow{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;  
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;  
 }
 .change:hover{
-color:white;
-cursor: pointer;
+  color:white;
+  cursor: pointer;
 }
 .arrowImage{
   width: 40px;
   height:40px
 }
 
+@media all and (max-width: 850px){
+  header{
+    font-size:112px;
+  }
+  .sliderContainer{
+    background-color: #222222;
+    display: grid;
+    grid-template-columns: 14% 72% 14%;
+  }
+}
+
+@media all and (max-width: 680px){
+  header{
+    font-size:96px;
+  }
+  main{
+    font-size:32px;
+  }
+  footer{
+    font-size:20px;
+  }
+  .change{
+    width:30px;
+    font-size: 48px;
+  }                                                                   
+  .sliderContainer{
+    background-color: #222222;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+  }   
+}
+
+@media all and (max-width: 580px){
+  header{
+    font-size:80px;
+  }
+  main{
+    font-size:24px;
+  }
+  footer{
+    font-size:16px;
+  }
+}
 </style>

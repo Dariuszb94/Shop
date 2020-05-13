@@ -4,21 +4,13 @@
 <script>
 export default {
   name: 'copyright',
-  data() {
-    return {
-    }
-  },
-  methods:{
-  },
-  created(){
-  },
 }
 </script>
 <style scoped>
 footer{
   background: #000000;
   color:white;
-  padding: 0.5%;
+  padding: 1%;
   font-size: 16px;
   width: 100%;
   text-align: center;

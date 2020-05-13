@@ -8,6 +8,7 @@ export default new Vuex.Store({
  state: {
     currentView:"home",
     subCurrentView:"women",
+    basket : [],
  },
  getters: {
     getView: state => {
@@ -23,6 +24,9 @@ export default new Vuex.Store({
       },
       changeSubView (state, payload) {
         state.subCurrentView = payload;
+      },
+      addItem (state, item) {
+        state.basket.push(item)
       }
  },
  actions: {}

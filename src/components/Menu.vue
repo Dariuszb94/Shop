@@ -8,39 +8,52 @@
     </ul>
   </div>
 </template>
-
 <script>
 export default {
   name: 'Menu',
-    data() {
+  data() {
     return {
+/**
+ * CurrentView is responsible for changing view between "home", "products", "cart".
+ */
        currentView: this.$store.getters.getView,
     }
   },
-    methods:{
-goToWomen() {
-this.$store.commit("changeView", "product");
-this.$store.commit("changeSubView", "women");
-},
-goToMen() {
-this.$store.commit("changeView", "product");
-this.$store.commit("changeSubView", "men");
-},
-goToExtras() {
-this.$store.commit("changeView", "product");
-this.$store.commit("changeSubView", "extras");
-},
-goToNew() {
-this.$store.commit("changeView", "product");
-this.$store.commit("changeSubView", "new");
-},
+  methods:{
+/**
+ * Redirect to women section
+ */
+    goToWomen() {
+      this.$store.commit("changeView", "product");
+      this.$store.commit("changeSubView", "women");
+    },
+
+/**
+ * Redirect to men section
+ */
+    goToMen() {
+      this.$store.commit("changeView", "product");
+      this.$store.commit("changeSubView", "men");
+    },
+
+/**
+ * Redirect to extras section
+ */
+    goToExtras() {
+      this.$store.commit("changeView", "product");
+      this.$store.commit("changeSubView", "extras");
+    },
+
+/**
+ * Redirect to news section
+ */
+    goToNew() {
+      this.$store.commit("changeView", "product");
+      this.$store.commit("changeSubView", "new");
+    },
   },
-  mounted(){
-  }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 .menuContainer{
@@ -55,13 +68,35 @@ this.$store.commit("changeSubView", "new");
 }
 .list-element{
   padding:8px;
-  font-size: 16px;
-
 }
 .menuButton{
   background-color:#373a3e !important;
   color:white !important;
-  font-size:20px;
+  font-size:32px;
 }
 
+@media all and (max-width: 850px){
+  .menuContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap:16px;
+  }
+  .list-element{
+    padding:0px;
+  }
+}
+
+@media all and (max-width: 680px){
+  .menuButton{
+    font-size:26px;
+  }
+}
+
+@media all and (max-width: 580px){
+  .menuButton{
+    font-size:20px;
+  }
+}
 </style>

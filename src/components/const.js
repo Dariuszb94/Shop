@@ -215,28 +215,33 @@ export const PRODUCTS = {
         trousers:{
             trousers1:{
                 img:"https://i.ibb.co/RpnNnbh/men-Trouser1.jpg",
-                description:"Trouser1",
+                description:"Trouser11",
                 price:"59.99 PLN"
             },
             trouses2:{
                 img:"https://i.ibb.co/0VM4bdG/men-Trouser2.jpg",
-                description:"Trouser2",
+                description:"Trouser12",
                 price:"89.99 PLN"
             },
             trousers3:{
                 img:"https://i.ibb.co/Jq2Rcck/men-Trouser3.jpg",
-                description:"Trouser3",
+                description:"Trouser13",
                 price:"69.99 PLN"
             },
             trousers4:{
                 img:"https://i.ibb.co/x2tHZp5/men-Trouser4.jpg",
-                description:"Trouser4",
+                description:"Trouser14",
                 price:"69.99 PLN"
             },
             trousers5:{
                 img:"https://i.ibb.co/b1yk54J/men-Trouser5.jpg",
-                description:"Trouser5",
+                description:"Trouser15",
                 price:"69.99 PLN"
+            },
+            trousers6:{
+                img:"https://i.ibb.co/Jq2Rcck/men-Trouser3.jpg",
+                description:"Trouser16",
+                price:"79.99 PLN"
             },
         },
         shorts:{
@@ -292,6 +297,16 @@ export const PRODUCTS = {
                 description:"Shirt4",
                 price:"79.99 PLN"
             },
+            shirt5:{
+                img:"https://i.ibb.co/18bg6K3/shirt2.jpg",
+                description:"Shirt5",
+                price:"49.99 PLN"
+            },
+            shirt6:{
+                img:"https://i.ibb.co/BVqg1b1/shirt1.jpg",
+                description:"Shirt6",
+                price:"49.99 PLN"
+            },
         }
     },
     extras:{
@@ -320,32 +335,43 @@ export const PRODUCTS = {
             description:"Bag5",
             price:"79.99 PLN"
         },
+        extra6:{
+            img:"https://i.ibb.co/X8KYZ0d/purse2.jpg",
+            description:"Bag6",
+            price:"39.99 PLN"
+        },
     },
     news:{
         new1:{
             img:"https://i.ibb.co/8dbr0r5/new1.jpg",
-            description:"Troousers1",
+            description:"Troousers21",
             price:"39.99 PLN"
         },
         new2:{
             img:"https://i.ibb.co/GfwwTSr/new2.jpg",
-            description:"T-Shirt1",
+            description:"T-Shirt21",
             price:"49.99 PLN"
         },
         new3:{
             img:"https://i.ibb.co/0ytbg8s/new3.jpg",
-            description:"Trousers2",
+            description:"Trousers22",
             price:"49.99 PLN"
         },
         new4:{
             img:"https://i.ibb.co/807X0WH/new5.jpg",
-            description:"T-Shirt2",
+            description:"T-Shirt22",
             price:"29.99 PLN"
         },
         new5:{
             img:"https://i.ibb.co/tQ6Kv2G/new4.jpg",
-            description:"T-Shirt3",
+            description:"T-Shirt23",
             price:"79.99 PLN"
+        },
+        new6:{
+            img:"https://i.ibb.co/GfwwTSr/new2.jpg",
+            description:"T-Shirt24",
+            price:"29.99 PLN"
         },
     },
 };
+
