@@ -9,7 +9,7 @@
       <v-btn class="basket">
         <div class="basketSection">
           <v-btn v-on:click="goToBasket()">
-            <v-icon>mdi-basket</v-icon>
+            <v-icon>mdi-basket</v-icon><span>({{$store.state.basket.length}})</span>
           </v-btn>
         </div>
       </v-btn>
@@ -54,7 +54,7 @@ export default {
   color:white;
 }
 h1{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display',Tahoma , serif;
   font-size:48px;
   position: relative;
   left: 24px;
@@ -68,6 +68,9 @@ h1{
 }
 a{
   text-decoration: none;
+  color:white;
+}
+span{
   color:white;
 }
 .title{
@@ -143,8 +146,7 @@ button{
     padding-right: 2px;
   } 
   .title{
-    padding-right:5%;
-    padding-left:5%;
+    padding-left:4%;
   }
 }
 </style>
