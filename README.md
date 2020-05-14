@@ -6,7 +6,7 @@ App lets you add clothes to cart.
 * [Setup](#setup)
 
 ## General info
-You can navigate between sections (women, men, extras, news). Clicking "BUY" adds item to your cart. You can check value of your cart at any moment by clicking on cart icon. Cart has info of bought items and their price. 
+You can navigate between sections (women, men, extras, news). Clicking "ADD TO CART" adds item to your cart (number of bought items is displayed next to cart icon). You can check value of your cart at any moment by clicking on cart icon. Cart has info of bought items and their price. 
 ## Technologies
 Project is created with:
 * Vue version: 2.6.11
